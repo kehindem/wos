@@ -21,8 +21,7 @@ PeakDetector(int floorValue)
 > *floorValue:* maximum expected distance value.  
 
 
-#
-
+<!-- -->
 >#### Set the maximum expected distance value.  
 
 >```
@@ -32,8 +31,8 @@ void setFloor(int floorValue)
 > *floorValue:* maximum expected distance value. 
 
 
-#
 
+<!-- -->
 >#### Set the sliding window size.
 
 >```
@@ -42,8 +41,8 @@ void setWindowSize(uint8_t windowSize)
 
 > *windowSize:* the window size in number of data points. Window size must be wide enough to encapsulate a single peak but less than the total number of data points. Larger window sizes are more beneficial for capturing wider peak distance profiles. For narrow peak profiles, peaks close to the end of the data set may be missed if the window size is too large. Default value, defined as DEFAULT\_WINDOW\_DATA\_WIDTH, is 5. Maximum allowable window size is 16.
 
-#
 
+<!-- -->
 >#### Set the maximum allowance for dispersion in data points. 
 
 >```
@@ -55,42 +54,40 @@ void setTolerance(uint8_t tol)
 			The default value is 10 (defined as
 			DEFAULT\_DISPERSION\_TOLERANCE).
 
-#
 
-
+<!-- -->
 >#### Return the magnitude of the largest peak distance. 
 
 >```
 int getLargestPeak(void)
 ```
 
-#
 
+<!-- -->
 >#### Return the number of peaks detected. 
 
 >```
 int getNumberOfPeaks(void)
 ```
 
-#
 
+<!-- -->
 >#### Return the magnitude of the last peak detected.
 
 >```
 int getLastPeak(void)
 ```
 
-#
 
+<!-- -->
 >#### Return the magnitude of the second last peak detected. 
 
 >```
 int getSecondLastPeak(void)
 ```
 
-#
 
-
+<!-- -->
 >#### Add a distance data point.
 
 >```
@@ -98,8 +95,8 @@ void addDistance(int distance)
 ```
 > *distance:* the distance value. 
 
-#
 
+<!-- -->
 >#### Perform peak detection on the distances in the window.
 
 >```
@@ -107,8 +104,8 @@ bool detectPeak(void)
 ```
 Returns true if a peak was detected; false, otherwise.
 
-# 
 
+<!-- -->
 >#### Reset Peak Detector
 
 >```
