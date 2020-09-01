@@ -75,7 +75,7 @@ int getPeopleCount(void)
 
 #
 
->####Set the lower threshold for peak detection
+>#### Set the lower threshold for peak detection
 
 >```
 void setPeakDetectorFloor(int floor)
