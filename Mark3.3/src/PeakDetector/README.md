@@ -10,9 +10,9 @@ A software library for processing a stream of data points and identifying extrem
 
 ## API
 
-###Methods:  
+### Methods:  
 
->####Initialize PeakDetector.  
+>#### Initialize PeakDetector.  
 
 >```
 PeakDetector(int floorValue)
@@ -23,7 +23,7 @@ PeakDetector(int floorValue)
 
 #
 
->####Set the maximum expected distance value.  
+>#### Set the maximum expected distance value.  
 
 >```
 void setFloor(int floorValue)
@@ -34,7 +34,7 @@ void setFloor(int floorValue)
 
 #
 
->####Set the sliding window size.
+>#### Set the sliding window size.
 
 >```
 void setWindowSize(uint8_t windowSize)
@@ -44,7 +44,7 @@ void setWindowSize(uint8_t windowSize)
 
 #
 
->####Set the maximum allowance for dispersion in data points. 
+>#### Set the maximum allowance for dispersion in data points. 
 
 >```
 void setTolerance(uint8_t tol)
@@ -58,7 +58,7 @@ void setTolerance(uint8_t tol)
 #
 
 
->####Return the magnitude of the largest peak distance. 
+>#### Return the magnitude of the largest peak distance. 
 
 >```
 int getLargestPeak(void)
@@ -66,7 +66,7 @@ int getLargestPeak(void)
 
 #
 
->####Return the number of peaks detected. 
+>#### Return the number of peaks detected. 
 
 >```
 int getNumberOfPeaks(void)
@@ -74,7 +74,7 @@ int getNumberOfPeaks(void)
 
 #
 
->####Return the magnitude of the last peak detected.
+>#### Return the magnitude of the last peak detected.
 
 >```
 int getLastPeak(void)
@@ -82,7 +82,7 @@ int getLastPeak(void)
 
 #
 
->####Return the magnitude of the second last peak detected. 
+>#### Return the magnitude of the second last peak detected. 
 
 >```
 int getSecondLastPeak(void)
@@ -91,7 +91,7 @@ int getSecondLastPeak(void)
 #
 
 
->####Add a distance data point.
+>#### Add a distance data point.
 
 >```
 void addDistance(int distance)
@@ -100,7 +100,7 @@ void addDistance(int distance)
 
 #
 
->####Perform peak detection on the distances in the window.
+>#### Perform peak detection on the distances in the window.
 
 >```
 bool detectPeak(void)
@@ -109,7 +109,7 @@ Returns true if a peak was detected; false, otherwise.
 
 # 
 
->####Reset Peak Detector
+>#### Reset Peak Detector
 
 >```
 void reset(void)
