@@ -37,3 +37,5 @@ Refer to the main sketch ../Mark3.2.ino for examples of its use and operation.
 Print debug information from the main Arduino sketch. 
 
 
+### Examples
+Example Arduino sketches for debugging.
