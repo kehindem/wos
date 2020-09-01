@@ -52,11 +52,9 @@ Exit - a person has recently left the zone's field of view.
 
 <!-- -->
 >#### Obtain the zone status.
-
 >```
 >ZoneStatus getZoneStatus(Zone zone)
 >```
-
 > *zone:* the zone of interest.  
 
 
@@ -64,7 +62,6 @@ Exit - a person has recently left the zone's field of view.
 
 <!-- -->
 >#### Return the number of people counted.
-
 >```
 >int getPeopleCount(void)
 >```
@@ -72,7 +69,6 @@ Exit - a person has recently left the zone's field of view.
 
 <!-- -->
 >#### Set the lower threshold for peak detection
-
 >```
 >void setPeakDetectorFloor(int floor)
 >```
@@ -82,64 +78,51 @@ Exit - a person has recently left the zone's field of view.
 
 <!-- --> 
 >#### Set the sliding window size for peak distance detection.
-
 >```
 >void setPeakDetectorWindowSize(uint8_t window)
 >```
-
 > *window:* the window size in number of data points. Window size must be wide enough to encapsulate a single peak but less than the total number of data points. Larger window size is more beneficial for capturing wider peak distance profiles. For narrow peak profiles, peaks close to the end of the data set may be missed if the window size is too large. Default value, defined as DEFAULT\_WINDOW\_DATA\_WIDTH, is 5. Maximum allowable window size is 16.
 
 
 
 <!-- -->
 >#### Set the dispersion tolerance for detecting a single peak.
-
+>```
+>void setPeakDetectorDispersionTolerance(uint8_t tol)
+>```
 > *tol:* maximum allowable deviation of data points within the 
 			peak detection window away from a truly smooth curve.
 			The default value is 10 (defined as
 			DEFAULT\_DISPERSION\_TOLERANCE).
-             
->```
->void setPeakDetectorDispersionTolerance(uint8_t tol)
->```
 
 
 <!-- -->
 >#### Set the peak variation tolerance. 
-
-> *peakVariationTol:* the maximum allowance for variations in a person's peak distance values. The default value is 10 (defined as
-DEFAULT\_PEAK\_VARIATION\_TOLERANCE).
-             
 >```
 >void setPeakVariationTolerance(uint8_t peakVariationTol)
 >```
-
+> *peakVariationTol:* the maximum allowance for variations in a person's peak distance values. The default value is 10 (defined as
+DEFAULT\_PEAK\_VARIATION\_TOLERANCE).
 
 
 <!-- -->
 >#### Set the vacancy threshold. 
-
+>```
+>void setVacancyThreshold(uint8_t percent)
+>```
 > *percent:* percentage of distance range 
              specifying a subrange of distances 
              above the floor in which a zone is 
              considered vacant. Must be greater
              than zero.
-             
->```
->void setVacancyThreshold(uint8_t percent)
->```
-
 
 <!-- -->
 >#### Add a new distance data point from a zone
-
-> *distance:* the distance value. 
- 
-> *zone:* the zone.
-
 >```
 >void addData(int distance, Zone zone)
 >```
+> *distance:* the distance value.  
+> *zone:* the zone.
 
 ## Source Files
 
