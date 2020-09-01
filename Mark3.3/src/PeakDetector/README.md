@@ -15,8 +15,8 @@ A software library for processing a stream of data points and identifying extrem
 >#### Initialize PeakDetector.  
 
 >```
-PeakDetector(int floorValue)
-```
+>PeakDetector(int floorValue)
+>```
 
 > *floorValue:* maximum expected distance value.  
 
@@ -25,8 +25,8 @@ PeakDetector(int floorValue)
 >#### Set the maximum expected distance value.  
 
 >```
-void setFloor(int floorValue)
-```
+>void setFloor(int floorValue)
+>```
 
 > *floorValue:* maximum expected distance value. 
 
@@ -36,8 +36,8 @@ void setFloor(int floorValue)
 >#### Set the sliding window size.
 
 >```
-void setWindowSize(uint8_t windowSize)
-```
+>void setWindowSize(uint8_t windowSize)
+>```
 
 > *windowSize:* the window size in number of data points. Window size must be wide enough to encapsulate a single peak but less than the total number of data points. Larger window sizes are more beneficial for capturing wider peak distance profiles. For narrow peak profiles, peaks close to the end of the data set may be missed if the window size is too large. Default value, defined as DEFAULT\_WINDOW\_DATA\_WIDTH, is 5. Maximum allowable window size is 16.
 
@@ -46,8 +46,8 @@ void setWindowSize(uint8_t windowSize)
 >#### Set the maximum allowance for dispersion in data points. 
 
 >```
-void setTolerance(uint8_t tol)
-```
+>void setTolerance(uint8_t tol)
+>```
 
 > *tol:* maximum allowable deviation of data points within the 
 			peak detection window away from a truly smooth curve.
@@ -59,40 +59,40 @@ void setTolerance(uint8_t tol)
 >#### Return the magnitude of the largest peak distance. 
 
 >```
-int getLargestPeak(void)
-```
+>int getLargestPeak(void)
+>```
 
 
 <!-- -->
 >#### Return the number of peaks detected. 
 
 >```
-int getNumberOfPeaks(void)
-```
+>int getNumberOfPeaks(void)
+>```
 
 
 <!-- -->
 >#### Return the magnitude of the last peak detected.
 
 >```
-int getLastPeak(void)
-```
+>int getLastPeak(void)
+>```
 
 
 <!-- -->
 >#### Return the magnitude of the second last peak detected. 
 
 >```
-int getSecondLastPeak(void)
-```
+>int getSecondLastPeak(void)
+>```
 
 
 <!-- -->
 >#### Add a distance data point.
 
 >```
-void addDistance(int distance)
-```
+>void addDistance(int distance)
+>```
 > *distance:* the distance value. 
 
 
@@ -100,18 +100,18 @@ void addDistance(int distance)
 >#### Perform peak detection on the distances in the window.
 
 >```
-bool detectPeak(void)
-```
-Returns true if a peak was detected; false, otherwise.
+>bool detectPeak(void)
+>```
+> Returns true if a peak was detected; false, otherwise.
 
 
 <!-- -->
 >#### Reset Peak Detector
 
 >```
-void reset(void)
-```
-Clears and re-initializes all state variables. 
+>void reset(void)
+>```
+>Clears and re-initializes all state variables. 
 
 
 ## Source Files

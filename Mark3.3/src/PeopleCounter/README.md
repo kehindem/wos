@@ -13,17 +13,17 @@ A software library for processing a stream of data points delimiting single file
 ### Enumeration Types:
 	
 >```
-Zone:          LEFT, RIGHT
-```
+>Zone:          LEFT, RIGHT
+>```
 
+<!-- -->
 The left zone corresponds to the field of view that is closest to the outside. The right zone corresponds to the field of view that is closest to the inside of the area. 
-
 
 
 <!-- -->
 >```
-ZoneStatus:    Vacant, Occupied
-```
+>ZoneStatus:    Vacant, Occupied
+>```
 
 Vacant - no one is in the zone's field of view.  
 Entrance - a person has recently entered the zone's field of view.   
@@ -37,9 +37,9 @@ Exit - a person has recently left the zone's field of view.
 >#### Initialize PeopleCounter.  
 
 >```
-PeopleCounter(int floorThresh, int floorToCeiling, 
-				    uint8_t vacancyThresholdPer)
-```
+>PeopleCounter(int floorThresh, int floorToCeiling, 
+>				    uint8_t vacancyThresholdPer)
+>```
 
 > *floorThresh:* maximum distance value expected.  
 
@@ -58,8 +58,8 @@ PeopleCounter(int floorThresh, int floorToCeiling,
 >#### Obtain the zone status.
 
 >```
-ZoneStatus getZoneStatus(Zone zone)
-```
+>ZoneStatus getZoneStatus(Zone zone)
+>```
 
 > *zone:* the zone of interest.  
 
@@ -70,16 +70,16 @@ ZoneStatus getZoneStatus(Zone zone)
 >#### Return the number of people counted.
 
 >```
-int getPeopleCount(void)
-```
+>int getPeopleCount(void)
+>```
 
 
 <!-- -->
 >#### Set the lower threshold for peak detection
 
 >```
-void setPeakDetectorFloor(int floor)
-```
+>void setPeakDetectorFloor(int floor)
+>```
 > *floor:* the lower threshold value. It is generally better to have a floor value as close as possible to your minimum expected peak distance to ensure adequate rejection of lower amplitude peaks that do not correspond to people crossing the zones completely. 
 
 
@@ -88,8 +88,8 @@ void setPeakDetectorFloor(int floor)
 >#### Set the sliding window size for peak distance detection.
 
 >```
-void setPeakDetectorWindowSize(uint8_t window)
-```
+>void setPeakDetectorWindowSize(uint8_t window)
+>```
 
 > *window:* the window size in number of data points. Window size must be wide enough to encapsulate a single peak but less than the total number of data points. Larger window size is more beneficial for capturing wider peak distance profiles. For narrow peak profiles, peaks close to the end of the data set may be missed if the window size is too large. Default value, defined as DEFAULT\_WINDOW\_DATA\_WIDTH, is 5. Maximum allowable window size is 16.
 
@@ -104,8 +104,8 @@ void setPeakDetectorWindowSize(uint8_t window)
 			DEFAULT\_DISPERSION\_TOLERANCE).
              
 >```
-void setPeakDetectorDispersionTolerance(uint8_t tol)
-```
+>void setPeakDetectorDispersionTolerance(uint8_t tol)
+>```
 
 
 <!-- -->
@@ -115,8 +115,8 @@ void setPeakDetectorDispersionTolerance(uint8_t tol)
 DEFAULT\_PEAK\_VARIATION\_TOLERANCE).
              
 >```
-void setPeakVariationTolerance(uint8_t peakVariationTol)
-```
+>void setPeakVariationTolerance(uint8_t peakVariationTol)
+>```
 
 
 
@@ -130,8 +130,8 @@ void setPeakVariationTolerance(uint8_t peakVariationTol)
              than zero.
              
 >```
-void setVacancyThreshold(uint8_t percent)
-```
+>void setVacancyThreshold(uint8_t percent)
+>```
 
 
 <!-- -->
@@ -142,8 +142,8 @@ void setVacancyThreshold(uint8_t percent)
 > *zone:* the zone.
 
 >```
-void addData(int distance, Zone zone)
-```
+>void addData(int distance, Zone zone)
+>```
 
 ## Source Files
 
