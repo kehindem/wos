@@ -138,7 +138,7 @@ Peak Detector Class Definition.
 
 Implementation details.
 
-**Developer Note:** The PathTracker storage struct could be implemented as a class to employ better modularity.
+**Developer Note:** The PathTracker storage struct could be implemented as a class for a more modular approach.
 
 ## PeopleCounterUnitTests
 Verifies the PeopleCounter class library. 
