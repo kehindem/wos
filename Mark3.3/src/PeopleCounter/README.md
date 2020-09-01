@@ -35,18 +35,14 @@ Exit - a person has recently left the zone's field of view.
 
 
 >#### Initialize PeopleCounter.  
-
 >```
 >PeopleCounter(int floorThresh, int floorToCeiling, 
 >				    uint8_t vacancyThresholdPer)
 >```
-
 > *floorThresh:* maximum distance value expected.  
-
 > *floorToCeiling:* expected distance range (difference
  						between the max distance and min distance). Must
- 						be greater than 100.
- 						 
+ 						be greater than 100.  
 > *vacancyThresholdPer:* percentage of distance range 
                          specifying a subrange of distances 
                          above the floor in which a zone is 
