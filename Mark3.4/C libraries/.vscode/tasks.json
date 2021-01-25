@@ -1,0 +1,59 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C: gcc build pk detector",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-g",
+                "${workspaceFolder}/peak_detector_unit_tests.c",
+                "${workspaceFolder}/peak_detector.c",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Shell build"
+        },
+        {
+            "type": "shell",
+            "label": "C: gcc build people counter",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-g",
+                "${workspaceFolder}/peak_detector.c",
+                "${workspaceFolder}/people_counter_test_class.c",
+                "${workspaceFolder}/people_counter_unit_tests.c",
+                "${workspaceFolder}/people_counter.c",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Shell build"
+        },
+        {
+            "type": "shell",
+            "label": "Run C file",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "problemMatcher": []
+        }
+    ],
+    "version": "2.0.0"
+}
